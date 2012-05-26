@@ -31,7 +31,8 @@ class DragonBall():
             return '...'
         elif self.x == 2 and self.y == 2:
             return "..\n.."
-
+        elif self.x == 1 and self.y == 2:
+            return ".\n."
 
 
 if __name__ == '__main__':
