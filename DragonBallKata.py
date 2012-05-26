@@ -25,10 +25,9 @@ class DragonBall():
         self.lines = arg2
 
     def output(self):
-        if self.columns == 1 and self.lines == 1:
-            return '.'
-        elif self.columns == 3 and self.lines == 1:
-            return '...'
+
+        if self.lines == 1:
+            return '.'*self.columns
         elif self.columns == 2 and self.lines == 2:
             return "..\n.."
         elif self.columns == 1 and self.lines == 2:
