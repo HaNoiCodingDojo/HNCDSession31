@@ -41,13 +41,11 @@ class DragonBall():
 
     def output(self):
         if (self.starX != 0):
-            self.result = self.addStar()
+            self.addStar()
         return self.result
    
     def addStar(self):
-        position = self.starX * (self.lines + 1) + self.starY
-        print self.starX, self.starY, position
-        print self.result
+        position = (self.starX - 1) * (self.lines + 1) + self.starY - 2
         self.result = list(self.result)
         self.result[position] = '*'
         self.result = ''.join(self.result)
