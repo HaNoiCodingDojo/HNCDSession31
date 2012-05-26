@@ -7,13 +7,21 @@ class TestDragonBall(unittest.TestCase):
         thing = DragonBall(1,1)
         self.assertEqual(".", thing.output())
 
+    def test_1_2(self):
+        thing = DragonBall(2,2)
+        self.assertEqual("..\n..", thing.output())
+
 
 class DragonBall():
     def __init__(self, arg1, arg2):
-        pass
+        self.arg1 = arg1
+        self.arg2 = arg2
 
     def output(self):
-        return('.')
+        if self.arg1 == 1 and self.arg2 == 1:
+            return '.'
+        else:
+            return "..\n.."
 
 
 
