@@ -57,7 +57,7 @@ class DragonBall():
         self.result = self.result[:-1]
 
     def position1d_from_2d(self, posX, posY):
-        return 0
+        return posX - 1
         
     def output(self):
         if (self.starX != 0):
