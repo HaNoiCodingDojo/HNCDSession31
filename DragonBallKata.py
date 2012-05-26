@@ -63,7 +63,17 @@ class DragonBall():
         self.result = self.result[:-1]
 
     def position1d_from_2d(self, posX, posY):
-        return posX - 1
+        # ..'
+        # *.'
+        # 1, 2 -> 3
+        # 0, 1 -> 3
+
+        # posX - 1, posY - 1
+        # self.lines
+        # self.columns + 1
+        posX_0 = posX - 1
+        posY_0 = posY - 1
+        return (self.columns + 1) * posY_0 + posX_0
         
     def output(self):
         if (self.starX != 0):
@@ -71,7 +81,7 @@ class DragonBall():
         return self.result
 
     def addStar(self):
-        position = (self.starX - 1) * (self.lines + 1) + self.starY - 2
+        position = self.position1d_from_2d(self.starX, self.starY)
         self.result = list(self.result)
         self.result[position] = '*'
         self.result = ''.join(self.result)
