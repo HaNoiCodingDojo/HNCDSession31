@@ -8,5 +8,14 @@ class TestDragonBall(unittest.TestCase):
         self.assertEqual(".", thing.output())
 
 
+class DragonBall():
+    def __init__(self, arg1, arg2):
+        pass
+
+    def output(self):
+        return('.')
+
+
+
 if __name__ == '__main__':
     unittest.main()
