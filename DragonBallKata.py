@@ -40,17 +40,14 @@ class DragonBall():
         self.result = self.result[:-1]
 
     def output(self):
-        if self.starX == 1 and self.starY == 1:
-            return "*"
-        if self.starX == 2 and self.starY == 1:
-            return ".*."
-        else:
-            if (self.starX != 0):
-                self.result = self.addStar()
-            return self.result
+        if (self.starX != 0):
+            self.result = self.addStar()
+        return self.result
    
     def addStar(self):
         position = self.starX * (self.lines + 1) + self.starY
+        print self.starX, self.starY, position
+        print self.result
         self.result = list(self.result)
         self.result[position] = '*'
         self.result = ''.join(self.result)
