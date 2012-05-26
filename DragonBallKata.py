@@ -34,10 +34,16 @@ class TestDragonBall(unittest.TestCase):
         thing.setAt(1,2)
         self.assertEqual(".\n*", thing.output())
         
-    def test_position1d(self):
+    def test_position1d_1_1(self):
         thing = DragonBall(1,1)
         result = thing.position1d_from_2d(1,1)
         expected = 0
+        self.assertEqual(expected, result)
+
+    def test_position1d_2_2(self):
+        thing = DragonBall(2,2)
+        result = thing.position1d_from_2d(2,1)
+        expected = 1
         self.assertEqual(expected, result)
 
 class DragonBall():
