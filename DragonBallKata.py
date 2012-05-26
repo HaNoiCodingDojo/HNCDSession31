@@ -18,6 +18,11 @@ class TestDragonBall(unittest.TestCase):
     def test_1_4(self):
         thing = DragonBall(1, 2)
         self.assertEqual(".\n.", thing.output())
+
+    def test_2_1(self):
+        thing = DragonBall(1, 1)
+        thing.setAt(1, 1)
+        self.assertEqual("*", thing.output())
         
 class DragonBall():
     def __init__(self, arg1, arg2):
