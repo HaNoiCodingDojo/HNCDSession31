@@ -21,17 +21,17 @@ class TestDragonBall(unittest.TestCase):
         
 class DragonBall():
     def __init__(self, arg1, arg2):
-        self.x = arg1
-        self.y = arg2
+        self.columns = arg1
+        self.lines = arg2
 
     def output(self):
-        if self.x == 1 and self.y == 1:
+        if self.columns == 1 and self.lines == 1:
             return '.'
-        elif self.x == 3 and self.y == 1:
+        elif self.columns == 3 and self.lines == 1:
             return '...'
-        elif self.x == 2 and self.y == 2:
+        elif self.columns == 2 and self.lines == 2:
             return "..\n.."
-        elif self.x == 1 and self.y == 2:
+        elif self.columns == 1 and self.lines == 2:
             return ".\n."
 
 
