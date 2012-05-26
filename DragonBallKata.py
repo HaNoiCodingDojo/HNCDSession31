@@ -18,15 +18,15 @@ class TestDragonBall(unittest.TestCase):
 
 class DragonBall():
     def __init__(self, arg1, arg2):
-        self.arg1 = arg1
-        self.arg2 = arg2
+        self.x = arg1
+        self.y = arg2
 
     def output(self):
-        if self.arg1 == 1 and self.arg2 == 1:
+        if self.x == 1 and self.y == 1:
             return '.'
-        elif self.arg1 == 3 and self.arg2 == 1:
+        elif self.x == 3 and self.y == 1:
             return '...'
-        elif self.arg1 == 2 and self.arg2 == 2:
+        elif self.x == 2 and self.y == 2:
             return "..\n.."
 
 
