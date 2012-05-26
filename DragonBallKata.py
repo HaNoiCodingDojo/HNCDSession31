@@ -46,6 +46,12 @@ class TestDragonBall(unittest.TestCase):
         expected = 1
         self.assertEqual(expected, result)
 
+    def test_position1d_1_2(self):
+        thing = DragonBall(2,2)
+        result = thing.position1d_from_2d(1,2)
+        expected = 3
+        self.assertEqual(expected, result)
+
 class DragonBall():
     def __init__(self, arg1, arg2):
         self.columns = arg1
