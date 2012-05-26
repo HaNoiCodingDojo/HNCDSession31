@@ -34,7 +34,6 @@ class TestDragonBall(unittest.TestCase):
         thing.setAt(1,2)
         self.assertEqual(".\n*", thing.output())
         
-
     def test_position1d(self):
         thing = DragonBall(1,1)
         result = thing.position1d_from_2d(1,1)
@@ -51,6 +50,9 @@ class DragonBall():
         self.result = line * self.lines
         self.result = self.result[:-1]
 
+    def position1d_from_2d(self, posX, posY):
+        return 0
+        
     def output(self):
         if (self.starX != 0):
             self.addStar()
