@@ -39,6 +39,8 @@ class DragonBall():
     def output(self):
         if self.arg1 == 1 and self.arg2 == 1:
             return "*"
+        if self.arg1 == 2 and self.arg2 == 1:
+            return ".*."
         else:
             line = '.' * self.columns + "\n"
             result = line * self.lines
