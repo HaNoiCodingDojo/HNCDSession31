@@ -16,11 +16,9 @@ class TestDragonBall(unittest.TestCase):
         self.assertEqual("...", thing.output())
     
     def test_1_4(self):
-        thing = Dragonball(1, 2)
+        thing = DragonBall(1, 2)
         self.assertEqual(".\n.", thing.output())
         
-
-
 class DragonBall():
     def __init__(self, arg1, arg2):
         self.x = arg1
