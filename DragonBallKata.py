@@ -28,11 +28,20 @@ class DragonBall():
     def __init__(self, arg1, arg2):
         self.columns = arg1
         self.lines = arg2
+        self.arg1 = 0
+        self.arg2 = 0
 
     def output(self):
-        line = '.' * self.columns + "\n"
-        result = line * self.lines
-        return result[:-1]
+        if self.arg1 == 1 and self.arg2 == 1:
+            return "*"
+        else:
+            line = '.' * self.columns + "\n"
+            result = line * self.lines
+            return result[:-1]
+
+    def setAt(self, arg1, arg2):
+        self.arg1 = arg1
+        self.arg2 = arg2
 
 
 if __name__ == '__main__':
