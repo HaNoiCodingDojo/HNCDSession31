@@ -25,12 +25,10 @@ class DragonBall():
         self.lines = arg2
 
     def output(self):
+        line = '.' * self.columns + "\n"
+        result = line * self.lines
+        return result[:-1]
 
-        line = '.'*self.columns
-        if self.lines == 1:
-            return line
-        elif self.lines == 2:
-            return line+'\n'+line
 
 if __name__ == '__main__':
     unittest.main()
