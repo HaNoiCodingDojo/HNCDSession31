@@ -38,6 +38,7 @@ class DragonBall():
 
     def output(self):
         result = ''
+
         if self.starX == 1 and self.starY == 1:
             return "*"
         if self.starX == 2 and self.starY == 1:
@@ -45,11 +46,16 @@ class DragonBall():
         else:
             line = '.' * self.columns + "\n"
             result = line * self.lines
+            if (self.starX != 0):
+                result = self.addStar(result)
             return result[:-1]
    
-#    def addStar(self, result):
-#        position = self.starX * (self.lines + 1) + self.starY
-        
+    def addStar(self, result):
+        position = self.starX * (self.lines + 1) + self.starY
+        result = list(result)
+        result[position] = '*'
+        result = ''.join(result)
+        return result
 
     def setAt(self, arg1, arg2):
         self.starX = arg1
