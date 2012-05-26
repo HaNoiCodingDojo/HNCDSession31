@@ -63,14 +63,6 @@ class DragonBall():
         self.result = self.result[:-1]
 
     def position1d_from_2d(self, posX, posY):
-        # ..'
-        # *.'
-        # 1, 2 -> 3
-        # 0, 1 -> 3
-
-        # posX - 1, posY - 1
-        # self.lines
-        # self.columns + 1
         posX_0 = posX - 1
         posY_0 = posY - 1
         return (self.columns + 1) * posY_0 + posX_0
